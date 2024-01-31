@@ -39,7 +39,7 @@ const Contacts = () => {
 
   const onAddContact = newContact => {
     const checkedContact = items.find(
-      contact => newContact.name === contact.name
+      contact => contactData.name.toLowerCase() === contact.name.toLowerCase()
     );
     if (checkedContact) {
       toast.info(`${newContact.name} is already in your contacts`);
